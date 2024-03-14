@@ -52,122 +52,26 @@
                     </div>
                 </div>
                 </nav>
+
                 <div class="last-chat">
-                  <div class="chat-row active d-flex">
+                  <div v-for="(contact, index) in contacts" class="chat-row active d-flex">
                     <div class="img-container d-flex">
-                      <div class="profile-img"><img src="img/avatar_1.jpg" alt=""></div>
+                      <div class="profile-img"><img :src="contact.avatar" alt=""></div>
                     </div>
                     <div class="text-container d-flex">
                       <div class="chat-text d-flex">
                         <div class="last-sms d-flex">
-                          <h4>Michele</h4>
+                          <h4> {{contact.name}} </h4>
                           <h6>Lorem, ipsum dolor sit amet</h6>
                         </div>
                         <div class="sms-time"><h6>16:30</h6></div>
                       </div>
                     </div>
                   </div>
-                  <div class="chat-row d-flex">
-                    <div class="img-container d-flex">
-                      <div class="profile-img"><img src="img/avatar_2.jpg" alt=""></div>
-                    </div>
-                    <div class="text-container d-flex">
-                      <div class="chat-text d-flex">
-                        <div class="last-sms d-flex">
-                          <h4>Fabio</h4>
-                          <h6>Lorem, ipsum dolor sit amet</h6>
-                        </div>
-                        <div class="sms-time"><h6>16:15</h6></div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="chat-row d-flex">
-                    <div class="img-container d-flex">
-                      <div class="profile-img"><img src="img/avatar_3.jpg" alt=""></div>
-                    </div>
-                    <div class="text-container d-flex">
-                      <div class="chat-text d-flex">
-                        <div class="last-sms d-flex">
-                          <h4>Riccardo</h4>
-                          <h6>Lorem, ipsum dolor sit amet</h6>
-                        </div>
-                        <div class="sms-time"><h6>16:05</h6></div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="chat-row d-flex">
-                    <div class="img-container d-flex">
-                      <div class="profile-img"><img src="img/avatar_4.jpg" alt=""></div>
-                    </div>
-                    <div class="text-container d-flex">
-                      <div class="chat-text d-flex">
-                        <div class="last-sms d-flex">
-                          <h4>Alessio</h4>
-                          <h6>Lorem, ipsum dolor sit amet</h6>
-                        </div>
-                        <div class="sms-time"><h6>15:50</h6></div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="chat-row d-flex">
-                    <div class="img-container d-flex">
-                      <div class="profile-img"><img src="img/avatar_5.jpg" alt=""></div>
-                    </div>
-                    <div class="text-container d-flex">
-                      <div class="chat-text d-flex">
-                        <div class="last-sms d-flex">
-                          <h4>Carmelo</h4>
-                          <h6>Lorem, ipsum dolor sit amet</h6>
-                        </div>
-                        <div class="sms-time"><h6>15:40</h6></div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="chat-row d-flex">
-                    <div class="img-container d-flex">
-                      <div class="profile-img"><img src="img/avatar_6.jpg" alt=""></div>
-                    </div>
-                    <div class="text-container d-flex">
-                      <div class="chat-text d-flex">
-                        <div class="last-sms d-flex">
-                          <h4>Roberta</h4>
-                          <h6>Lorem, ipsum dolor sit amet</h6>
-                        </div>
-                        <div class="sms-time"><h6>15:35</h6></div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="chat-row d-flex">
-                    <div class="img-container d-flex">
-                      <div class="profile-img"><img src="img/avatar_7.jpg" alt=""></div>
-                    </div>
-                    <div class="text-container d-flex">
-                      <div class="chat-text d-flex">
-                        <div class="last-sms d-flex">
-                          <h4>Lorenzo</h4>
-                          <h6>Lorem, ipsum dolor sit amet</h6>
-                        </div>
-                        <div class="sms-time"><h6>15:25</h6></div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="chat-row d-flex">
-                    <div class="img-container d-flex">
-                      <div class="profile-img"><img src="img/avatar_8.jpg" alt=""></div>
-                    </div>
-                    <div class="text-container d-flex">
-                      <div class="chat-text d-flex">
-                        <div class="last-sms d-flex">
-                          <h4>Davide</h4>
-                          <h6>Lorem, ipsum dolor sit amet</h6>
-                        </div>
-                        <div class="sms-time"><h6>15:20</h6></div>
-                      </div>
-                    </div>
-                  </div>
+                <!--// FINE CHAT-ROW FINE CHAT-ROW FINE CHAT-ROW // -->
                 </div>
               </div>
-      
+        <!--  CHAT ATTIVA CHAT ATTIVA CHAT ATTIVA  -->
               <div class="active-chat">
                 <div class="topbar d-flex">
                   <div class="active-user d-flex">
