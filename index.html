@@ -114,71 +114,14 @@
                       </div>
                     </div>
                   </div>
-                  <!-- <div class="row">
-                    <div class="col received">
-                      <div class="sms">
-                        <div class="sms-content d-flex">
-                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Error aut quod eum dolorum, molestias vero ea itaque quam nisi maiores alias? Voluptatem hic ut pariatur libero praesentium distinctio numquam doloremque?</p>
-                          <div class="sms-options">
-                            <div><i class="fa-solid fa-chevron-down"></i></div>
-                            <div class="sms-options-panel">
-                              <ul>
-                                <li><a href="#">Info messaggio</a></li>
-                                <li><a href="#">Cancella messaggio</a></li>
-                              </ul>
-                            </div>
-                          </div>
-                        </div>
-                        <span>16:18 </span>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="col sent">
-                      <div class="sms">
-                        <div class="sms-content d-flex">
-                          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Error aut quod eum dolorum, molestias vero ea itaque quam nisi maiores alias? Voluptatem hic ut pariatur libero praesentium distinctio numquam doloremque?</p>
-                          <div class="sms-options">
-                            <div><i class="fa-solid fa-chevron-down"></i></div>
-                            <div class="sms-options-panel">
-                              <ul>
-                                <li><a href="#">Info messaggio</a></li>
-                                <li><a href="#">Cancella messaggio</a></li>
-                              </ul>
-                            </div>
-                          </div>
-                        </div>
-                        <span>16:25 </span>
-                      </div>
-                    </div>
-                  </div>
-      
-                  <div class="row">
-                    <div class="col received">
-                      <div class="sms">
-                        <div class="sms-content d-flex">
-                          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Error aut quod eum dolorum, molestias vero ea itaque quam nisi maiores alias? Voluptatem hic ut pariatur libero praesentium distinctio numquam doloremque?</p>
-                          <div class="sms-options">
-                            <div><i class="fa-solid fa-chevron-down"></i></div>
-                            <div class="sms-options-panel">
-                              <ul>
-                                <li><a href="#">Info messaggio</a></li>
-                                <li><a href="#">Cancella messaggio</a></li>
-                              </ul>
-                            </div>
-                          </div>
-                        </div>
-                        <span>16:30</span>
-                      </div>
-                    </div>
-                  </div> -->
+                  
                 </div>
                 <div class="sms-input d-flex">
                   <div class="input-icon d-flex">
                     <i class="fa-regular fa-face-smile"></i>
                   </div>
                   <div class="write-sms d-flex">
-                    <input type="text" placeholder="Scrivi un messaggio">
+                    <input v-model.trim="newMessageItem" type="text" placeholder="Scrivi un messaggio" @keyup.enter="addMessage">
                   </div>
                   <div class="input-icon d-flex">
                     <i class="fa-solid fa-microphone"></i>
