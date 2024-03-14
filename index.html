@@ -54,7 +54,7 @@
                 </nav>
 
                 <div class="last-chat">
-                  <div v-for="(contact, index) in contacts" class="chat-row active d-flex">
+                  <div v-for="(contact, index) in contacts" class="chat-row active d-flex" @click="counter = index" >
                     <div class="img-container d-flex">
                       <div class="profile-img"><img :src="contact.avatar" alt=""></div>
                     </div>
@@ -95,7 +95,7 @@
                 </div>
       
                 <div class="sms-chat">
-                  <div v-for="messageItem in contacts[0].messages" class="row">
+                  <div v-for="messageItem in contacts[counter].messages" class="row">
                     <div :class="(messageItem.status === 'sent' ? 'sent' : 'received')" class="col">
                       <div class="sms">
                         <div class="sms-content d-flex">

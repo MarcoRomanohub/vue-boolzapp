@@ -9,7 +9,7 @@ createApp({
     return{
 
       contacts,
-
+      counter: 0,
     }
   },
 
