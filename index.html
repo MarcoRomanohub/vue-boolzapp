@@ -95,11 +95,11 @@
                 </div>
       
                 <div class="sms-chat">
-                  <div class="row">
-                    <div class="col sent">
+                  <div v-for="messageItem in contacts[0].messages" class="row">
+                    <div :class="(messageItem.status === 'sent' ? 'sent' : 'received')" class="col">
                       <div class="sms">
                         <div class="sms-content d-flex">
-                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Error aut quod eum dolorum, molestias vero ea itaque quam nisi maiores alias? Voluptatem hic ut pariatur libero praesentium distinctio numquam doloremque?</p>
+                            <p> {{messageItem.message}} </p>
                             <div class="sms-options">
                               <div><i class="fa-solid fa-chevron-down"></i></div>
                               <div class="sms-options-panel">
@@ -114,11 +114,11 @@
                       </div>
                     </div>
                   </div>
-                  <div class="row">
+                  <!-- <div class="row">
                     <div class="col received">
                       <div class="sms">
                         <div class="sms-content d-flex">
-                          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Error aut quod eum dolorum, molestias vero ea itaque quam nisi maiores alias? Voluptatem hic ut pariatur libero praesentium distinctio numquam doloremque?</p>
+                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Error aut quod eum dolorum, molestias vero ea itaque quam nisi maiores alias? Voluptatem hic ut pariatur libero praesentium distinctio numquam doloremque?</p>
                           <div class="sms-options">
                             <div><i class="fa-solid fa-chevron-down"></i></div>
                             <div class="sms-options-panel">
@@ -171,7 +171,7 @@
                         <span>16:30</span>
                       </div>
                     </div>
-                  </div>
+                  </div> -->
                 </div>
                 <div class="sms-input d-flex">
                   <div class="input-icon d-flex">
