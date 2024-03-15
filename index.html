@@ -62,7 +62,7 @@
                       <div class="chat-text d-flex">
                         <div class="last-sms d-flex">
                           <h4> {{contact.name}} </h4>
-                          <h6>Lorem, ipsum dolor sit amet</h6>
+                          <h6>{{contact.messages[contact.messages.length-1].message}}</h6>
                         </div>
                         <div class="sms-time"><h6>16:30</h6></div>
                       </div>
@@ -82,7 +82,7 @@
                       <div class="chat-text d-flex">
                         <div class="last-sms d-flex">
                           <h4>{{contacts[activeContactId].name}}</h4>
-                          <h6>Lorem, ipsum dolor sit amet</h6>
+                          <h6> Info </h6>
                         </div>
                       </div>
                     </div>
@@ -121,7 +121,6 @@
                     <i class="fa-regular fa-face-smile"></i>
                   </div>
                   <div class="write-sms d-flex">
-                    <!-- TODO: al click aggiungere funzione/o aggiungere azione nella stessa funzione che fa la stessa cosa ma con status received e set timeout 1sec -->
                     <input v-model.trim="newMessageItem" type="text" placeholder="Scrivi un messaggio" @keyup.enter="addMessage" >
                   </div>
                   <div class="input-icon d-flex">
