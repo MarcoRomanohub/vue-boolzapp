@@ -22,12 +22,12 @@ createApp({
         message: this.newMessageItem,
         status: 'sent'
       }
-      contacts[this.activeContactId].messages.push(newMessage)
+      this.contacts[this.activeContactId].messages.push(newMessage)
     }
   },
 
   mounted(){
-    
+    activeContactId = activeContactId
   },
 
   created(){
