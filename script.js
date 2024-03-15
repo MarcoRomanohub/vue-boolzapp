@@ -35,6 +35,10 @@ createApp({
           this.contacts[this.activeContactId].messages.push(newMessageAnswer)
         },1000 )
 
+    },
+
+    removeMessage(index){
+      this.contacts[this.activeContactId].messages.splice(index, 1)
     }
 
 

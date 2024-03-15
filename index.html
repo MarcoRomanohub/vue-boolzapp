@@ -95,7 +95,7 @@
                 </div>
       
                 <div class="sms-chat">
-                  <div v-for="messageItem in contacts[activeContactId].messages" class="row">
+                  <div v-for="(messageItem, index) in contacts[activeContactId].messages" class="row">
                     <div :class="messageItem.status" class="col">
                       <div class="sms">
                         <div class="sms-content d-flex">
@@ -105,7 +105,7 @@
                               <div class="sms-options-panel">
                                 <ul>
                                   <li><a href="#">Info messaggio</a></li>
-                                  <li><a href="#">Cancella messaggio</a></li>
+                                  <li @click="removeMessage(index)" ><a href="#">Cancella messaggio</a></li>
                                 </ul>
                               </div>
                             </div>
