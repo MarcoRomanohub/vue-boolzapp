@@ -11,6 +11,7 @@ createApp({
       contacts,
       activeContactId: 0,
       newMessageItem:'',
+      contactToSearch:'',
     }
   },
 
@@ -29,13 +30,22 @@ createApp({
         date: '10/01/2020 15:30:55',
         message: 'Ok',
         status: 'received'
-      }
+      }    
       setTimeout( ()=> {
-        this.contacts[this.activeContactId].messages.push(newMessageAnswer)
-        
-      },1000 )
+          this.contacts[this.activeContactId].messages.push(newMessageAnswer)
+        },1000 )
 
     }
+
+
+  },
+
+  computed: {
+
+    filteredContacts(){
+      return contacts.filter(contact => contact.name.toLowerCase().includes(this.contactToSearch.toLowerCase()))
+    }
+
   },
 
   mounted(){

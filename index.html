@@ -48,13 +48,13 @@
                   <nav>
                     <div class="search">
                       <div><i class="fa-solid fa-magnifying-glass"></i></div>
-                      <input type="text" placeholder="Cerca o inizia una nuova chat">
+                      <input type="text" placeholder="Cerca o inizia una nuova chat" v-model="contactToSearch">
                     </div>
                 </div>
                 </nav>
 
                 <div class="last-chat">
-                  <div v-for="(contact, index) in contacts" class="chat-row d-flex" @click="activeContactId = index" :class="{'active': activeContactId === index }" >
+                  <div v-for="(contact, index) in filteredContacts" class="chat-row d-flex" @click="activeContactId = index" :class="{'active': activeContactId === index }" >
                     <div class="img-container d-flex">
                       <div class="profile-img"><img :src="contact.avatar" alt=""></div>
                     </div>
