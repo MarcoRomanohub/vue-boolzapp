@@ -76,12 +76,12 @@
                 <div class="topbar d-flex">
                   <div class="active-user d-flex">
                     <div class="img-container d-flex">
-                      <div class="profile-img"><img src="img/avatar_1.jpg" alt=""></div>
+                      <div class="profile-img"><img :src="contacts[activeContactId].avatar" alt=""></div>
                     </div>
                     <div class="text-container d-flex">
                       <div class="chat-text d-flex">
                         <div class="last-sms d-flex">
-                          <h4>Michele</h4>
+                          <h4>{{contacts[activeContactId].name}}</h4>
                           <h6>Lorem, ipsum dolor sit amet</h6>
                         </div>
                       </div>
@@ -96,7 +96,7 @@
       
                 <div class="sms-chat">
                   <div v-for="messageItem in contacts[activeContactId].messages" class="row">
-                    <div :class="(messageItem.status === 'sent' ? 'sent' : 'received')" class="col">
+                    <div :class="messageItem.status" class="col">
                       <div class="sms">
                         <div class="sms-content d-flex">
                             <p> {{messageItem.message}} </p>
@@ -121,7 +121,8 @@
                     <i class="fa-regular fa-face-smile"></i>
                   </div>
                   <div class="write-sms d-flex">
-                    <input v-model.trim="newMessageItem" type="text" placeholder="Scrivi un messaggio" @keyup.enter="addMessage">
+                    <!-- TODO: al click aggiungere funzione/o aggiungere azione nella stessa funzione che fa la stessa cosa ma con status received e set timeout 1sec -->
+                    <input v-model.trim="newMessageItem" type="text" placeholder="Scrivi un messaggio" @keyup.enter="addMessage" >
                   </div>
                   <div class="input-icon d-flex">
                     <i class="fa-solid fa-microphone"></i>

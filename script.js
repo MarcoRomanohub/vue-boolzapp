@@ -27,7 +27,11 @@ createApp({
   },
 
   mounted(){
-    console.log(contacts);
+    
+  },
+
+  created(){
+    
   }
 }).mount('#app')
 
