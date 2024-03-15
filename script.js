@@ -22,7 +22,8 @@ createApp({
         message: this.newMessageItem,
         status: 'sent'
       }
-      this.contacts[this.activeContactId].messages.push(newMessage)
+      this.contacts[this.activeContactId].messages.push(newMessage),
+      this.newMessageItem = ''
     }
   },
 
