@@ -15,6 +15,7 @@ createApp({
       newMessageItem:'',
       contactToSearch:'',
       // dateTime: DateTime.now().setLocale('it').toFormat('dd/MM/yyyy hh:mm:ss'),
+      hourDate : DateTime.now().setLocale('it').toFormat(' hh:mm'),
     }
   },
 
