@@ -15,7 +15,7 @@ createApp({
       newMessageItem:'',
       contactToSearch:'',
       // dateTime: DateTime.now().setLocale('it').toFormat('dd/MM/yyyy hh:mm:ss'),
-      hourDate : DateTime.now().setLocale('it').toFormat(' hh:mm'),
+      lastMessageDate : DateTime.now().setLocale('it').toFormat(' hh:mm'),
     }
   },
 
@@ -23,17 +23,17 @@ createApp({
 
     addMessage(){
       const newMessage = {
-        date:  DateTime.now().setLocale('it').toFormat(' dd/MM/yyyy hh:mm:ss '),
+        date:  DateTime.now().setLocale('it').toFormat(' dd/MM/yyyy hh:mm '),
         message: this.newMessageItem,
         status: 'sent'
       }
       this.contacts[this.activeContactId].messages.push(newMessage),
       this.newMessageItem = ''
-
-      // this.dateTime = DateTime.now().setLocale('it').toFormat('dd/MM/yyyy hh:mm:ss')
+      this.lastMessageDate = DateTime.now().setLocale('it').toFormat(' hh:mm')
+      
 
       const newMessageAnswer = {
-        date:  DateTime.now().setLocale('it').toFormat('dd/MM/yyyy hh:mm:ss'),
+        date:  DateTime.now().plus({ seconds: 1 }).setLocale('it').toFormat('dd/MM/yyyy hh:mm'),
         message: 'Ok',
         status: 'received'
       }    
