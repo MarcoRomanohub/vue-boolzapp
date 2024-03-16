@@ -22,7 +22,7 @@ createApp({
 
     addMessage(){
       const newMessage = {
-        date:  DateTime.now().setLocale('it').toFormat('dd/MM/yyyy hh:mm:ss'),
+        date:  DateTime.now().setLocale('it').toFormat(' dd/MM/yyyy hh:mm:ss '),
         message: this.newMessageItem,
         status: 'sent'
       }
