@@ -1,4 +1,6 @@
-import { contacts } from './contacts.js'
+const {DateTime} = luxon;
+
+import { contacts } from './contacts.js';
 
 const {createApp} = Vue;
 
@@ -12,6 +14,7 @@ createApp({
       activeContactId: 0,
       newMessageItem:'',
       contactToSearch:'',
+      // dateTime: DateTime.now().setLocale('it').toFormat('dd/MM/yyyy hh:mm:ss'),
     }
   },
 
@@ -19,21 +22,24 @@ createApp({
 
     addMessage(){
       const newMessage = {
-        date: '10/01/2020 15:30:55',
+        date:  DateTime.now().setLocale('it').toFormat('dd/MM/yyyy hh:mm:ss'),
         message: this.newMessageItem,
         status: 'sent'
       }
       this.contacts[this.activeContactId].messages.push(newMessage),
       this.newMessageItem = ''
 
+      // this.dateTime = DateTime.now().setLocale('it').toFormat('dd/MM/yyyy hh:mm:ss')
+
       const newMessageAnswer = {
-        date: '10/01/2020 15:30:55',
+        date:  DateTime.now().setLocale('it').toFormat('dd/MM/yyyy hh:mm:ss'),
         message: 'Ok',
         status: 'received'
       }    
       setTimeout( ()=> {
           this.contacts[this.activeContactId].messages.push(newMessageAnswer)
         },1000 )
+
 
     },
 
@@ -53,6 +59,8 @@ createApp({
   },
 
   mounted(){
+
+    // this.dateTime = DateTime.now().setLocale('it').toFormat('dd/MM/yyyy hh:mm:ss')
 
   },
 

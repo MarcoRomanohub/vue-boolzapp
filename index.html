@@ -15,6 +15,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
     <!-- Vue Js -->
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <!-- Luxon -->
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/luxon/3.4.4/luxon.min.js' integrity='sha512-dUlSLLkxslGILhPdCkALwk4szPhp3xmZIKFtlUD+O9Lslq41Aksmdt5OGqpomDoT4FsCUH70jQU8ezZHI3v1RQ==' crossorigin='anonymous'></script>
 </head>
 <body>
     
@@ -110,7 +112,7 @@
                               </div>
                             </div>
                         </div>
-                        <span>16:15 </span>
+                        <span> {{messageItem.date}} </span>
                       </div>
                     </div>
                   </div>
