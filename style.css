@@ -218,7 +218,7 @@ input{
   background-color: lightgray;
 }
 
-.last-chat .active:hover{
+.last-chat .chat-row.active{
   background-color: lightgray;
 }
 
