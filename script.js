@@ -23,7 +23,7 @@ createApp({
 
     addMessage(){
       const newMessage = {
-        date:  DateTime.now().setLocale('it').toFormat(' dd/MM/yyyy hh:mm '),
+        date:  DateTime.now().setLocale('it').toFormat(' dd/MM/yyyy hh:mm:ss '),
         message: this.newMessageItem,
         status: 'sent'
       }
@@ -33,7 +33,7 @@ createApp({
       
 
       const newMessageAnswer = {
-        date:  DateTime.now().plus({ seconds: 1 }).setLocale('it').toFormat('dd/MM/yyyy hh:mm'),
+        date:  DateTime.now().plus({ seconds: 1 }).setLocale('it').toFormat('dd/MM/yyyy hh:mm:ss'),
         message: 'Ok',
         status: 'received'
       }    
